@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acordes de Venezuela</title>
+<style>
+:root{--navy:#06213a;--gold:#f3bf35;--paper:#f7f3ec;--ink:#173042}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+header{height:92px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;gap:20px;position:sticky;top:0;z-index:10}
+.brand{font-family:Georgia,serif;font-size:26px;white-space:nowrap}.brand span{color:var(--gold);font-style:italic}.tag{display:block;font:11px Arial;letter-spacing:2px;margin-top:3px;color:#fff}
+nav{display:flex;gap:22px;align-items:center}nav a{color:#fff;text-decoration:none;font-size:16px}nav a:hover{color:var(--gold)}
+.hero{position:relative;width:100%;overflow:hidden;background:#132d45}.hero img{display:block;width:100%;height:auto}
+.hero .search{position:absolute;left:29.2%;top:56.5%;width:41.5%;height:54px;border-radius:30px;background:#fff;display:flex;align-items:center;padding:5px;box-shadow:0 3px 12px #0003}.hero input{border:0;outline:0;flex:1;font-size:16px;padding:0 16px;background:transparent}.hero button{border:0;border-radius:25px;background:#173a5a;color:#fff;padding:12px 28px;font-size:16px;cursor:pointer}
+.section{max-width:1150px;margin:0 auto;padding:48px 22px}.section h2{font:700 32px Georgia,serif;color:#173a5a;margin:0 0 16px}.section p{font-size:17px;line-height:1.65}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:25px}.card{background:#fff;border:1px solid #ddd6ca;border-radius:14px;padding:22px}.card a{text-decoration:none;color:#173a5a}.card h3{margin-top:0;font-family:Georgia,serif}.pill{display:inline-block;padding:7px 12px;border-radius:18px;background:#e8eef2;margin:4px;color:#173a5a}
+footer{background:var(--navy);color:#fff;text-align:center;padding:30px 20px}footer strong{font:24px Georgia,serif}.small{opacity:.8;font-size:14px}
+@media(max-width:850px){header{height:auto;padding:18px 20px;align-items:flex-start}.brand{font-size:22px}nav{display:none}.hero .search{left:10%;width:80%;top:55%;height:46px}.hero button{padding:9px 17px;font-size:14px}.hero input{font-size:13px}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#inicio" style="color:#fff;text-decoration:none">Acordes de <span>Venezuela</span><span class="tag">NUESTRA MÚSICA, SIEMPRE VIVA</span></a>
+  <nav>
+    <a href="#inicio">Inicio</a><a href="#proyecto">El proyecto</a><a href="#autores">Autores</a><a href="#obras">Obras</a><a href="#generos">Géneros</a><a href="#paises">Países</a><a href="#recursos">Recursos</a>
+  </nav>
+</header>
+<main id="inicio">
+<section class="hero" aria-label="Portada de Acordes de Venezuela">
+  <img src="assets/hero.png" alt="Acordes de Venezuela: cuatro, maracas, sombrero venezolano y paisaje de tepuyes">
+  <form class="search" onsubmit="return false"><input aria-label="Buscar" placeholder="Buscar canciones, autores, géneros..." id="q"><button onclick="buscar()">Buscar</button></form>
+</section>
+<section class="section" id="proyecto"><h2>Una memoria musical en construcción</h2><p><strong>Acordes de Venezuela</strong> es una plataforma dedicada a la música de raíz tradicional y popular, sus autores, compositores, géneros, repertorios y formas de interpretación.</p><p>Nace desde Venezuela y se abre progresivamente al repertorio de otros países, manteniendo como principio que <strong>el protagonista es siempre la obra y quien la creó.</strong></p></section>
+<section class="section" id="autores"><h2>Autores</h2><div class="cards"><div class="card"><h3>Venezuela</h3><p>El núcleo original del proyecto y su extraordinaria diversidad musical.</p></div><div class="card"><h3>América Latina</h3><p>Repertorios tradicionales y populares incorporados progresivamente.</p></div><div class="card"><h3>España y otros países</h3><p>Una perspectiva internacional que amplía el proyecto sin perder su núcleo venezolano.</p></div></div></section>
+<section class="section" id="obras"><h2>Obras y cifrados</h2><p>El catálogo reunirá título, autor, género o especie, tonalidad, letra, cifrado, fuente y documentación, con herramientas de transposición y revisión.</p></section>
+<section class="section" id="generos"><h2>Géneros y diversidad</h2><p>Valses, bambucos, tonadas, merengues, joropos, danzas, aguinaldos, pasajes y otras expresiones forman parte de una memoria musical diversa.</p><span class="pill">Vals</span><span class="pill">Bambuco</span><span class="pill">Tonada</span><span class="pill">Merengue</span><span class="pill">Joropo</span><span class="pill">Pasaje</span><span class="pill">Aguinaldo</span><span class="pill">Danza</span></section>
+<section class="section" id="paises"><h2>Países incorporados</h2><p>Venezuela · Colombia · España · Estados Unidos · México · Perú · Puerto Rico · República Dominicana</p><p class="small">El país es un dato editorial del autor; no se deduce automáticamente de la obra.</p></section>
+<section class="section" id="recursos"><h2>Recursos</h2><p>Próximamente: transposición, consulta de acordes, partituras, arreglos y herramientas para músicos.</p></section>
+</main>
+<footer><strong>Acordes de Venezuela</strong><div>Preservar · Difundir · Valorar</div><div class="small">Primera versión pública · Proyecto en construcción</div></footer>
+<script>function buscar(){const q=document.getElementById('q').value.trim();if(q)document.getElementById('obras').scrollIntoView();}</script>
+</body></html>
